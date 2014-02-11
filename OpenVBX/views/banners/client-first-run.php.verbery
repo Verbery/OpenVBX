@@ -1,0 +1,17 @@
+<?php if(OpenVBX::getTwilioAccountType() == 'Trial'): ?>
+<div id="client-first-run">
+    <h3>Welcome to Verbery Call Center App!</h3>
+    <p>While you're using Verbery Free Trial account feel free to look around.</p>
+    <p>You can make and receive calls, send messages and configure anything you like - once you upgrade to full account it will<br />remain when you finished.</p>
+    <p><span class="dismiss-first-run"><a href="#" class="dismiss">hide this message</a></span>To get started with Verbery Call Center App visit <a href="http://www.verbery.com/faq#docs-basics" target="_blank">Verbery documentation</a>.</p>
+    <img class="arrow" src="<?php echo asset_url('/assets/i/client-first-run-arrow.png'); ?>" alt="" />
+</div>
+<?php else: ?>
+<div id="client-first-run">
+    <h3>Welcome to Verbery Call Center App!</h3>
+    <p>You can make outbound calls from your browser at any time. Just use the Call button to dial out.</p> 
+    <p>To receive calls in your browser you must be the recipient of a Dial applet in a Flow through either direct selection<br />or through a group.<br />You can then use the Status button to go online and receive phone calls.</p>
+    <p><span class="dismiss-first-run"><a href="#" class="dismiss">hide this message</a></span>For more information about the Verbery Call Center App Basics visit <a href="http://www.verbery.com/faq#docs-basics" target="_blank">Verbery documentation</a>.</p>
+    <img class="arrow" src="<?php echo asset_url('/assets/i/client-first-run-arrow.png'); ?>" alt="" />
+</div>
+<?php endif; ?>
