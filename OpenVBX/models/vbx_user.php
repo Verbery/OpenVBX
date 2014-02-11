@@ -699,4 +699,39 @@ class VBX_User extends MY_Model {
 
 		return $settings[$key]->save();
 	}
+
+	/*
+	 * Function to have a single login page
+	 * for all the Customers and their agents
+	 * Original OpenVBX has it's own login page
+	 * based on the tenant`s url_prefix, e.g.
+	 * http://www.app.verbery.com/customer1/auth/login
+	 * Now we can have a single page:
+	 * http://www.app.verbery.com/auth/singlesignin
+	 */
+	public static function singlesignin($email, $password, $captcha, $captcha_token) {
+
+		$ci =& get_instance();
+		$res = $ci->db
+			->select('users.*, tenants.*')
+			->from('users')
+			->join('tenants', 'users.tenant_id = tenants.id')
+			->where('email = ', $email)
+			->where('is_active', 1)
+			->where('tenants.active', 1)
+			->limit(1)
+			->get()->result();
+
+		$user = new VBX_User;
+
+		foreach ($user->fields as $f) {
+			$user->$f = $res[0]->$f;
+		}
+
+		if (empty($user)) {
+			return FALSE;
+		} else {
+			return self::login_openvbx($user, $password);
+		}
+	}
 }
