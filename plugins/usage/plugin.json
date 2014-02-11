@@ -3,10 +3,16 @@
 	"author": "shawn@twilio.com",
 	"description": "A sample plugin for viewing usage data & costs.",
 	"links": [{
-		"menu": "Usage",
+		"menu": "Reporting",
 		"url": "usage",
 		"script": "usage.php",
 		"label": "Usage"
+	},
+	{
+		"menu": "Reporting",
+		"url": "call_log",
+		"script": "call_log.php",
+		"label": "Call Log"
 	}],
-	"disabled": true
+	"disabled": false
 }

@@ -34,7 +34,7 @@ $usage_denominator = '$';
 
 		<br />
 
-		<p>Usage data for account <?php echo $account_sid; ?>, <?php echo $usage_start; ?> through <?php echo $usage_end; ?></p>
+		<p>Usage data <!-- for account <?php echo $account_sid; ?>, --> from <?php echo $usage_start; ?> through <?php echo $usage_end; ?></p>
 
 		<br />
 
