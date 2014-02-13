@@ -1,1 +1,1 @@
-To start setting up OpenVBX, we suggest you start out with building your first <a href="<?php echo site_url('flows'); ?>">call flow</a>.
+To start setting up ExtaSec Phone System, we suggest you start out with building your first <a href="<?php echo site_url('flows'); ?>">call flow</a>.

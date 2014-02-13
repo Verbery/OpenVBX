@@ -4,13 +4,13 @@
 		<h2 class="vbx-content-heading">Settings</h2>
 		<ul>
 			<li><a href="#theme">Theme</a></li>
-			<li><a href="#plugins">Plugins</a></li>
 		<?php if($tenant_mode == Site::MODE_MULTI): ?>
+			<li><a href="#plugins">Plugins</a></li><?php /* moved here, cus I dont want Customers to see this */ ?>
 			<li><a href="#multi-tenant">Tenants</a></li>
-		<?php endif; ?>
 			<li><a href="#twilio-account">Twilio Account</a></li>
-			<li><a href="#system-config">System Config</a></li>
 			<li><a href="#about">About</a></li>
+		<?php endif; ?>
+			<li><a href="#system-config">System Config</a></li>
 		</ul>
 	</div><!-- .vbx-content-tabs -->
 	

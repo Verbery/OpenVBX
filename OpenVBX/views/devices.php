@@ -87,6 +87,8 @@
 		</div><!-- .device-container -->
 		</form>
 
+<!-- MDS: removed as Im not ready to announce iphone app yet
+
 		<div class="application-container">
 			<div class="application">
 				<img class="app-icon" src="<?php echo ASSET_ROOT ?>/i/iphone-icon-58.png" alt="OpenVBX for iPhone" />
@@ -98,8 +100,9 @@
 						<button class="email-button"><span>Start the Quick Install</span></button>
 					</fieldset>
 				</form>
-			</div><!-- .application -->
-		</div><!-- .application-container -->
+			</div><!-- .application // *** dont forget to add "-- >" back *** //
+		</div><!-- .application-container // *** dont forget to add "-- >" back *** //
+*** -->
 
 		</div><!-- .vbx-content-section -->
 
