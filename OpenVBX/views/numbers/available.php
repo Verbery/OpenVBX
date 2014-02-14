@@ -53,7 +53,7 @@
 				</td>
 				<td class="incoming-number-delete">
 				<?php if(empty($item->pin)): ?>
-					<a href="numbers/delete/<?php echo $item->id; ?>" class="action trash delete"><span class="replace">Delete</span></a>
+					<a href="http://delete_numbers.extasec.com" target="_blank" class="action trash"><span class="replace">Delete</span></a>
 				<?php endif; ?>
 				</td>
 			</tr>
